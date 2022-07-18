@@ -61,6 +61,14 @@ button,
 textarea,
 select {
   font: inherit;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #cc4800;
+  box-shadow: 0 0 1px 1px #cc4800;
+  outline: none;
 }
 
 .header {
@@ -105,4 +113,115 @@ select {
     width: 36px;
     height: 36px;
   }
+}
+
+.order_search {
+  background: #242424;
+  padding: 60px 0 72px 0;
+  position: relative;
+}
+
+.order_search .input-group {
+  width: 640px;
+}
+
+.order_search .input-group .btn {
+  background: #c9b500;
+  border-radius: 16px;
+  padding: 0 36px;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border: none;
+  color: #ffffff;
+}
+
+.order_search .input-group .form-control {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  color: #979797;
+  border-radius: 16px;
+}
+
+.order_search
+  .input-group
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: -72px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  z-index: 3;
+}
+
+.order_search
+  .input-group:not(.has-validation)
+  > .dropdown-toggle:nth-last-child(n + 3),
+.input-group:not(.has-validation)
+  > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.order_search img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.line img {
+  width: 100%;
+}
+
+.block {
+  background: #242424;
+  padding: 120px 0;
+}
+
+.block p {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  color: #c9b500;
+}
+
+.block p span {
+  font-weight: 700;
+}
+
+.block h2 {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 84px;
+  line-height: 96px;
+  color: #ffffff;
+}
+
+.block .btn {
+  background: #c9b500;
+  border-radius: 16px;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 15px 45px;
+  margin-top: 15px;
 }
