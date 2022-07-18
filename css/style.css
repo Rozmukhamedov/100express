@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: #ffffff;
+  font-family: "Exo", sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.header {
+  background: #242424;
+  padding: 10px 0;
+  border-bottom: 6px solid #c9b400;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header a p {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-right: 10px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header .user_logo {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 576px) {
+  .header .navbar-brand img {
+    width: 110px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .header .user_logo {
+    width: 36px;
+    height: 36px;
+  }
+}
